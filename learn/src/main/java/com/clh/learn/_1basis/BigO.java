@@ -1,5 +1,10 @@
 package com.clh.learn._1basis;
 
+/**
+ * 大O计算时间复杂度：
+ *    O(n) ,O(1) ,O(n^2),O(log n) O(n log n)
+ *
+ */
 public class BigO {
     public static void main(String[] args) {
         int a = 1;		//1次 O(1)
