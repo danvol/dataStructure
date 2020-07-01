@@ -7,6 +7,7 @@ import java.util.Random;
 
 /**
  * 测试年龄用
+ * 模拟生成14亿条数据
  */
 public class Test {
 	public static void main(String[] args) throws Exception {
