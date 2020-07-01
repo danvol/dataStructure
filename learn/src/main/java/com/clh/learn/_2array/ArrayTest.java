@@ -1,6 +1,9 @@
 package com.clh.learn._2array;
 
 
+/**
+ * List 集合模拟
+ */
 public class ArrayTest {
 	
 	private int size;		//数组的长度
