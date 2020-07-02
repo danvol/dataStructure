@@ -7,23 +7,26 @@ public class MyLinkedList {
 	
 	public void insertHead(int data){		//插入链表的头部		data就是插入的数据
 		ListNode newNode = new ListNode(data);
-		//如果原来就有数据呢？
+		//如果原来就有数据呢？ 看上课的图，最左上方，头插入。 这里不用判断是否有头。
 		newNode.next = head;		//栈内存的引用
 		head = newNode;
 		
 		//插入O(1)
 	}
-	
+
+
+	//看图  从 position =2 的地方插入，相当于在1,2 之间插入  。 从0开始，就是从 第2,3节点之间插入
+	//这里的cur节点是 第二个节点，position=1
 	public void insertNth(int data,int position){		//插入链表的中间 假设定义在第N个插入 O(n)
 		if(position == 0) {		//这个表示插入在头部了
 			insertHead(data);
 		}else{
-			ListNode cur = head;
-			for(int i = 1; i < position ; i++){
+			ListNode cur = head;   //位置0 ，第一个节点
+			for(int i = 1; i < position ; i++){   //从第二个节点开始遍历
 				cur = cur.next;		//一直往后遍历   p=p->next;  ->是c++里面的往后找指针
 			}
 			ListNode newNode = new ListNode(data);
-			//
+			//重要
 			newNode.next = cur.next;		//新加的点指向后面 保证不断链
 			cur.next = newNode;			//把当前的点指向新加的点
 		}
