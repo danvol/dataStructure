@@ -13,19 +13,29 @@ public class MyArrayList<E> implements MyList<E> {
 		this.size = DEFAULT_SIZE;
 	}
 
+	/**
+	 * 新增元素
+	 * 判断是否需要扩容，不需要直接添加；扩容 用新的数组，将旧数组 逐一替换
+	 * @param e
+	 */
 	@Override
 	public void add(E e) {
-		data[index++] = e;
-		if (index == size) { // ����
+		data[index++] = e;  // index++  等价于  this.index++   ;默认是 this 对象的，如果  add(int index)  则需要区分 this.index= index 前者是 this的成员变量，后者是 方法的局部变量
+		if (index == size) { // 扩容:经历了++运算后等于size 大小，说明该扩容了
 			this.size = this.size * 2 + 1;
 			Object newData[] = new Object[this.size];
-			for (int i = 0; i < data.length; i++) {
+			for (int i = 0; i < data.length; i++) {                     //循环复制copy 过去
 				newData[i] = data[i];
 			}
 			this.data = newData;
 		}
 	}
 
+	/**
+	 * 根据下标移除元素
+	 * 从下标位置 ，逐个将后面的元素向前平移
+	 * @param i
+	 */
 	@Override
 	public void remove(int i) {
 		if (i >= 0 && i < index) {
@@ -54,6 +64,11 @@ public class MyArrayList<E> implements MyList<E> {
 		if(index <= 0) return true;
 		return false;
 	}
+
+	/**
+	 * 根据对象地址移除元素
+	 * @param e
+	 */
 	@Override
 	public void remove(Object e) {
 		if(!isEmpty()) {
