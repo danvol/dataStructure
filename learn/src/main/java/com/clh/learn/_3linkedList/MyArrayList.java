@@ -16,6 +16,8 @@ public class MyArrayList<E> implements MyList<E> {
 	/**
 	 * 新增元素
 	 * 判断是否需要扩容，不需要直接添加；扩容 用新的数组，将旧数组 逐一替换
+	 * 插入尾部。
+	 * 如果是插入中间位置，会复杂点，往后平移
 	 * @param e
 	 */
 	@Override
