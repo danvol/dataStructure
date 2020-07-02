@@ -3,10 +3,10 @@ package com.clh.learn._3linkedList;
 
 public class MyArrayList<E> implements MyList<E> {
 
-	private static final int DEFAULT_SIZE = 10;
+	private static final int DEFAULT_SIZE = 10;  //默认数组大小
 	private Object data[];
-	private int index;
-	private int size;
+	private int index; //有效元素的下标
+	private int size;   //数组总大小
 
 	public MyArrayList() {
 		this.data = new Object[DEFAULT_SIZE];
