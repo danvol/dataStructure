@@ -2,6 +2,9 @@ package com.clh.learn._4stack;
 
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class KuoHaoStack {
 	
 	public static boolean isOk(String s){		//s表示的就是待匹配的括号串 [}使用字符来表示 时间复杂度 O(n)

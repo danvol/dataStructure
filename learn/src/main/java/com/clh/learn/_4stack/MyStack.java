@@ -1,5 +1,9 @@
 package com.clh.learn._4stack;
 
+/**
+ *
+ * @param <Item>
+ */
 public interface MyStack<Item> {
 
 	MyStack<Item> push(Item item);		//入栈

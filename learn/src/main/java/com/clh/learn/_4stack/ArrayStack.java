@@ -1,5 +1,9 @@
 package com.clh.learn._4stack;
 
+/**
+ *
+ * @param <Item>
+ */
 public class ArrayStack<Item> implements MyStack<Item>{
 	
 	private Item [] a = (Item[]) new Object[1];		//最好就是开始的时候就设置大小
